@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import  { useCallback } from 'react';
 import { WalletLogo } from './WalletLogo';
 import { provider } from './provider';
 
