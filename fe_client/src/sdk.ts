@@ -1,5 +1,5 @@
-import EcosystemWallet from '@rapidfire/id';
-// import EcosystemWallet from './appConfig';
+// import EcosystemWallet from '@rapidfire/id';
+import EcosystemWallet from './appConfig';
 
 // Initialize the SDK with required parameters
 export const sdk = new EcosystemWallet({

@@ -1,24 +1,25 @@
-import { WagmiProvider, useAccount } from 'wagmi'
-import { config } from './wagmi'
 import { sdk } from './sdk'
 import { useEffect } from "react";
-import { CreateWalletButton } from './CreatWalletButton'
-import { BatchTransactionComponent } from './interactTransaction';
-
+// import { BatchTransactionComponent } from './interactTransaction';
+import CreateWalletButton from "../page/CreatWalletButton";
+import BatchTransactionComponent from "../page/interactTransaction";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 
 function App() {
-  const { isConnected } = useAccount();
   useEffect(() => {
-    sdk.getEthereumProvider({policy: "pol_09d071fa-b91f-42e1-b594-c8f73edb3fe6"});
+    sdk.getEthereumProvider({ policy: "pol_39612fcb-514a-42bb-a677-0238db6cb720" });
   }, []);
-  if (isConnected)
-    return (
-      <WagmiProvider config={config}>
-        {CreateWalletButton()}
-      </WagmiProvider>
-    )
-
-  else
-    return <BatchTransactionComponent />
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<CreateWalletButton />} />
+        <Route path="/Interact" element={<BatchTransactionComponent />} />
+      </Routes>
+    </Router>
+  );
 }
 export default App

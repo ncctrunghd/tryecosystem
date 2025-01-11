@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "page/CreatWalletButton.tsx", "page/interactTransaction.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

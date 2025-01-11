@@ -5,7 +5,7 @@ class EcosystemWallet extends Client {
         super({
             baseConfig: {
                 // ecosystemWalletDomain: 'https://id.sample.openfort.xyz',
-                ecosystemWalletDomain: 'https://beaches-elite-and-its.trycloudflare.com',
+                ecosystemWalletDomain: 'https://louis-related-joke-ct.trycloudflare.com',
                 ecosystemId: 'test-29d55ffd-6e21-4939-bd26-ff2c79299c8d',
             },
             appMetadata,
